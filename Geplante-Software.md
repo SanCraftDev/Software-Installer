@@ -49,9 +49,7 @@
  - MSI Afterburner
  - Epson Scan 2
  - Siganl
- - JetBrains ToolBox (Was ist das David?)
- - IntelllJ
- - PyCharm
+ - JetBrains ToolBox
  - VSCode
  - Atom
  - MediathekView (Was ist das David?)
