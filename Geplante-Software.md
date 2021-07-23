@@ -74,6 +74,7 @@
  - Blender
  - WinSCP
  - Node.js
+ - Nextcloud Client
  - 
  
  **MS-Store Verlinkungen:**
