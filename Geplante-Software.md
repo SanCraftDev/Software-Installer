@@ -75,6 +75,7 @@
  - WinSCP
  - Node.js
  - Nextcloud Client
+ - OpenVPN
  - 
  
  **MS-Store Verlinkungen:**
