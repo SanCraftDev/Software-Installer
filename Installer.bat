@@ -1,6 +1,9 @@
 @echo off
 :start
-curl -L --output %0 --url https://download.san0j.de/software/Installer.bat
+FOR /F "usebackq" %%f IN (`PowerShell -NoProfile -Command "Write-Host([Environment]::GetFolderPath('Desktop'))"`) DO (
+  SET "DESKTOP_FOLDER=%%f"
+  )
+curl -L -o %0 --url https://download.san0j.de/software/Installer.bat
 del "%userprofile%\AppData\Local\Temp\Programm.msi"
 del "%userprofile%\AppData\Local\Temp\Programm.exe"
 del "%userprofile%\AppData\Local\Temp\Programm.bat"
@@ -23,10 +26,10 @@ Pause
 mkdir "%ProgramFiles(x86)%\Software-Installer"
 mkdir "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer"
 cd "%ProgramFiles(x86)%\Software-Installer"
-curl -L --output Software-Installer.bat --url https://download.san0j.de/software/Mod-Installer.bat
-curl -L --output Installer-Uninstaller.bat --url https://download.san0j.de/software/Installer.bat
-curl -L --output Donwload.ico --url https://download.san0j.de/software/Download.ico
-curl -L --output Installer.ico --url https://download.san0j.de/software/Installer.ico
+curl -L -o Software-Installer.bat --url https://download.san0j.de/software/Mod-Installer.bat
+curl -L -o Installer-Uninstaller.bat --url https://download.san0j.de/software/Installer.bat
+curl -L -o Donwload.ico --url https://download.san0j.de/software/Download.ico
+curl -L -o Installer.ico --url https://download.san0j.de/software/Installer.ico
 
 set SCRIPT="%TEMP%\%RANDOM%-%RANDOM%-%RANDOM%-%RANDOM%.vbs"
 echo Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
@@ -64,7 +67,7 @@ IF ERRORLEVEL 1 GOTO l
 :l
 set SCRIPT="%TEMP%\%RANDOM%-%RANDOM%-%RANDOM%-%RANDOM%.vbs"
 echo Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
-echo sLinkFile = "%USERPROFILE%\Desktop\Software-Installer.lnk" >> %SCRIPT%
+echo sLinkFile = "%DESKTOP_FOLDER%\Software-Installer.lnk" >> %SCRIPT%
 echo Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
 echo oLink.Arguments = "/C %ProgramFiles(x86)%\Software-Installer\Mod-Installer.bat" >> %SCRIPT%
@@ -100,7 +103,7 @@ CLS
 del /S /Q %ProgramFiles(x86)%\Software-Installer\Donwload.ico
 del /S /Q %ProgramFiles(x86)%\Software-Installer\Installer.ico
 del /S /Q %ProgramFiles(x86)%\Software-Installer\Mod-Installer.bat
-del /S /Q %USERPROFILE%\Desktop\Software-Installer.lnk
+del /S /Q %DESKTOP_FOLDER%\Software-Installer.lnk
 rmdir /S /Q "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer"
 
 CLS
