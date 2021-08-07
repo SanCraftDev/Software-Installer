@@ -1,6 +1,6 @@
 @echo off
 :start
-curl -L -o %0 --url https://download.san0j.de/software/Installer.bat
+curl -L -o %0 https://dl.san0j.de/software/Installer.bat
 FOR /F "usebackq" %%f IN (`PowerShell -NoProfile -Command "Write-Host([Environment]::GetFolderPath('Desktop'))"`) DO (
   SET "DESKTOP_FOLDER=%%f"
   )
@@ -26,10 +26,10 @@ Pause
 mkdir "%ProgramFiles(x86)%\Software-Installer"
 mkdir "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer"
 cd "%ProgramFiles(x86)%\Software-Installer"
-curl -L -o Software-Installer.bat --url https://download.san0j.de/software/Mod-Installer.bat
-curl -L -o Installer-Uninstaller.bat --url https://download.san0j.de/software/Installer.bat
-curl -L -o Donwload.ico --url https://download.san0j.de/software/Download.ico
-curl -L -o Installer.ico --url https://download.san0j.de/software/Installer.ico
+curl -L -o Software-Installer.bat https://dl.san0j.de/software/Mod-Installer.bat
+curl -L -o Installer-Uninstaller.bat https://dl.san0j.de/software/Installer.bat
+curl -L -o Donwload.ico https://dl.san0j.de/software/Download.ico
+curl -L -o Installer.ico https://dl.san0j.de/software/Installer.ico
 
 set SCRIPT="%TEMP%\%RANDOM%-%RANDOM%-%RANDOM%-%RANDOM%.vbs"
 echo Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
