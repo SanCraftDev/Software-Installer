@@ -115,5 +115,5 @@ del /S /Q %0
 GOTO end
 
 :restart
-start cmd.exe /C %0
+start %ComSpec% /C %0
 EXIT /B

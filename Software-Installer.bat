@@ -30,7 +30,7 @@ IF ERRORLEVEL 2 GOTO tl
 IF ERRORLEVEL 1 GOTO of
 
 :restart
-start cmd.exe /C %0
+start %ComSpec% /C %0
 EXIT /B
 
 :end
