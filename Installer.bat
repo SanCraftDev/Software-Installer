@@ -105,12 +105,15 @@ del /S /Q %ProgramFiles(x86)%\Software-Installer\Installer.ico
 del /S /Q %ProgramFiles(x86)%\Software-Installer\Mod-Installer.bat
 del /S /Q %DESKTOP_FOLDER%\Software-Installer.lnk
 rmdir /S /Q "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer"
-
 CLS
-del /S /Q %ProgramFiles(x86)%\Software-Installer\Installer-Uninstaller.bat
-del /S /Q %0
 echo.
 echo  Fertig! Scripte wurden gel”scht!
-echo  Ausversehen entfernt? https://github.com/2020Sanoj/Mod-Installer/releases/latest
+echo  Ausversehen entfernt? https://github.com/2020Sanoj/Software-Installer/releases/latest
 Pause
+del /S /Q %ProgramFiles(x86)%\Software-Installer\Installer-Uninstaller.bat
+del /S /Q %0
 GOTO end
+
+:restart
+start %0
+EXIT /B
