@@ -115,5 +115,5 @@ del /S /Q %0
 GOTO end
 
 :restart
-start %0
+start cmd.exe /C %0
 EXIT /B
