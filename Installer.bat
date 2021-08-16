@@ -4,9 +4,9 @@ curl -L -o %0 https://dl.san0j.de/software/Installer.bat
 FOR /F "usebackq" %%f IN (`PowerShell -NoProfile -Command "Write-Host([Environment]::GetFolderPath('Desktop'))"`) DO (
   SET "DESKTOP_FOLDER=%%f"
   )
-del "%userprofile%\AppData\Local\Temp\Programm.msi"
-del "%userprofile%\AppData\Local\Temp\Programm.exe"
-del "%userprofile%\AppData\Local\Temp\Programm.bat"
+del "%TMP%\Programm.msi"
+del "%TMP%\Programm.exe"
+del "%TMP%\Programm.bat"
 
 CLS
 echo.
