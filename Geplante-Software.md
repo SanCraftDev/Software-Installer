@@ -76,6 +76,10 @@
  - Node.js
  - Nextcloud Client
  - OpenVPN
+ - chrome, firefox, opera, edge dev versionen
+ - cemu
+ - multimc
+ - technic loader
  - 
  
  **MS-Store Verlinkungen:**
@@ -102,4 +106,5 @@
  - Zattoo
  - App-Installer
  - Pinterest
+ - terminal/dev version
  - 
