@@ -8,7 +8,7 @@ del /S /Q "%TMP%\Programm.bat"
 CLS
 echo.
 echo  Wilkommen!
-echo  1. Browser/E-Mail/Office/E-Mail
+echo  1. Browser/E-Mail/Office
 echo  2. Tools (Normale Nutzer)
 echo  3. Spiele
 echo  4. Social Media/Messenger/Entertaiment
