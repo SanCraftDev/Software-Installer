@@ -2,9 +2,6 @@
 
 **Vorraussichtlich Verfügbare Software - Unsortiert:**
 
- - Firefox
- - Chrome
- - Thunderbird
  - 7Zip
  - Mein Mod-Installer
  - FileZilla
@@ -41,8 +38,6 @@
  - TomTom MyDrive Connect
  - Rockstar Games Launcher, Uplay, Origin
  - Wireguard Client
- - Opera
- - Edge
  - Gimp
  - Corsair Icue
  - MSI Dragon Center
@@ -76,7 +71,6 @@
  - Node.js
  - Nextcloud Client
  - OpenVPN
- - chrome, firefox, opera, edge dev versionen
  - cemu
  - multimc
  - technic loader
