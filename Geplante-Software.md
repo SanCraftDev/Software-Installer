@@ -74,6 +74,10 @@
  - cemu
  - multimc
  - technic loader
+ - HW-Info
+ - Prime95
+ - CPUZ
+ - Aida
  - 
  
  **MS-Store Verlinkungen:**
@@ -101,4 +105,5 @@
  - App-Installer
  - Pinterest
  - terminal/dev version
+ - Cinebench
  - 
