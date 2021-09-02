@@ -23,9 +23,9 @@ IF ERRORLEVEL 1 GOTO is
 CLS
 echo  Instalation starten?
 Pause
-mkdir "%ProgramFiles(x86)%\Software-Installer"
+mkdir "%appdata%\Software-Installer"
 mkdir "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer"
-cd "%ProgramFiles(x86)%\Software-Installer"
+cd "%appdata%\Software-Installer"
 curl -L -o Software-Installer.bat https://dl.san0j.de/software/Software-Installer.bat
 curl -L -o Installer-Uninstaller.bat https://dl.san0j.de/software/Installer.bat
 curl -L -o Download.ico https://dl.san0j.de/software/Download.ico
@@ -36,8 +36,8 @@ echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
 echo  sLinkFile = "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer\Software-Installer.lnk" >> %SCRIPT%
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
-echo  oLink.Arguments = "/C %ProgramFiles(x86)%\Software-Installer\Software-Installer.bat" >> %SCRIPT%
-echo  oLink.IconLocation = "%ProgramFiles(x86)%\Software-Installer\Download.ico" >> %SCRIPT%
+echo  oLink.Arguments = "/C %appdata%\Software-Installer\Software-Installer.bat" >> %SCRIPT%
+echo  oLink.IconLocation = "%appdata%\Software-Installer\Download.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
 del /S /Q %SCRIPT%
@@ -47,14 +47,14 @@ echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
 echo  sLinkFile = "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer\Installer-Uninstaller.lnk" >> %SCRIPT%
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
-echo  oLink.Arguments = "/C %ProgramFiles(x86)%\Software-Installer\Installer-Uninstaller.bat" >> %SCRIPT%
-echo  oLink.IconLocation = "%ProgramFiles(x86)%\Software-Installer\Installer.ico" >> %SCRIPT%
+echo  oLink.Arguments = "/C %appdata%\Software-Installer\Installer-Uninstaller.bat" >> %SCRIPT%
+echo  oLink.IconLocation = "%appdata%\Software-Installer\Installer.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
 del /S /Q %SCRIPT%
 
 CLS
-echo  Scripte erfolgreich in "%ProgramFiles(x86)%\Software-Installer" gespeichert!
+echo  Scripte erfolgreich in "%appdata%\Software-Installer" gespeichert!
 echo  Desktopverkpfung erstellen?
 echo.
 echo  1. Ja
@@ -70,8 +70,8 @@ echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
 echo  sLinkFile = "%DESKTOP_FOLDER%\Software-Installer.lnk" >> %SCRIPT%
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
-echo  oLink.Arguments = "/C %ProgramFiles(x86)%\Software-Installer\Software-Installer.bat" >> %SCRIPT%
-echo  oLink.IconLocation = "%ProgramFiles(x86)%\Software-Installer\Donwload.ico" >> %SCRIPT%
+echo  oLink.Arguments = "/C %appdata%\Software-Installer\Software-Installer.bat" >> %SCRIPT%
+echo  oLink.IconLocation = "%appdata%\Software-Installer\Donwload.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
 del /S /Q %SCRIPT%
@@ -107,7 +107,7 @@ echo.
 echo  Fertig! Scripte wurden gel”scht!
 echo  Ausversehen entfernt? https://github.com/2020Sanoj/Software-Installer/releases/latest
 Pause
-rmdir /S /Q %ProgramFiles(x86)%\Software-Installer"
+rmdir /S /Q %appdata%\Software-Installer"
 del /S /Q %0
 GOTO end
 
