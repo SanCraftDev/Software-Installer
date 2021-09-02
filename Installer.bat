@@ -26,7 +26,7 @@ Pause
 mkdir "%ProgramFiles(x86)%\Software-Installer"
 mkdir "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer"
 cd "%ProgramFiles(x86)%\Software-Installer"
-curl -L -o Software-Installer.bat https://dl.san0j.de/software/Mod-Installer.bat
+curl -L -o Software-Installer.bat https://dl.san0j.de/software/Software-Installer.bat
 curl -L -o Installer-Uninstaller.bat https://dl.san0j.de/software/Installer.bat
 curl -L -o Download.ico https://dl.san0j.de/software/Download.ico
 curl -L -o Installer.ico https://dl.san0j.de/software/Installer.ico
@@ -70,7 +70,7 @@ echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
 echo  sLinkFile = "%DESKTOP_FOLDER%\Software-Installer.lnk" >> %SCRIPT%
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
-echo  oLink.Arguments = "/C %ProgramFiles(x86)%\Software-Installer\Mod-Installer.bat" >> %SCRIPT%
+echo  oLink.Arguments = "/C %ProgramFiles(x86)%\Software-Installer\Software-Installer.bat" >> %SCRIPT%
 echo  oLink.IconLocation = "%ProgramFiles(x86)%\Software-Installer\Donwload.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
