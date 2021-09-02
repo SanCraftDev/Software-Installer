@@ -2,6 +2,8 @@
 
 **Vorraussichtlich Verfügbare Software - Unsortiert:**
 
+ - dev version browser/mail
+ - imagemagic
  - 7Zip
  - Mein Mod-Installer
  - FileZilla
@@ -13,22 +15,23 @@
  - Notepad++
  - Putty
  - Audacity
- - DaVinci Resolve
+ - DaVinci Resolve - X
  - Better Crewlink
  - Miencraft
  - Discord (Normal, PTB, Canary und Dev)
  - Blue Stacks
  - Java
  - Python
- - Github Desktop
- - Nvidea RTX Voice
+ - Github Desktop - beta - cli
+ - Nvidea brodcast
  - Geforce Experience
  - OBS Studio
- - Overwolf
- - Curseforge
+ - streamlabs obs
+ - Overwolf - X
+ - Curseforge - X
  - Twitch
- - Twitch Studio
- - Soundtrack by Twitch
+ - Twitch Studio - X
+ - Soundtrack by Twitch - X
  - Streamlabs OBS
  - Elgato Game Capture
  - WhyNotWin11, ReadySunValley, PC-IntegrationsPrüfung
@@ -78,9 +81,12 @@
  - Prime95
  - CPUZ
  - Aida
+ - docker
+ - zoom
+ - vim
  - 
  
- **MS-Store Verlinkungen:**
+ **MS-Store Verlinkungen:** (ms-windows-store://pdp/?productid=9)
  - Twitter
  - Klett
  - Cinebench

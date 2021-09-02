@@ -28,7 +28,7 @@ mkdir "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer"
 cd "%ProgramFiles(x86)%\Software-Installer"
 curl -L -o Software-Installer.bat https://dl.san0j.de/software/Mod-Installer.bat
 curl -L -o Installer-Uninstaller.bat https://dl.san0j.de/software/Installer.bat
-curl -L -o Donwload.ico https://dl.san0j.de/software/Download.ico
+curl -L -o Download.ico https://dl.san0j.de/software/Download.ico
 curl -L -o Installer.ico https://dl.san0j.de/software/Installer.ico
 
 set SCRIPT="%TEMP%\%RANDOM%-%RANDOM%-%RANDOM%-%RANDOM%.vbs"
@@ -37,7 +37,7 @@ echo  sLinkFile = "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Inst
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
 echo  oLink.Arguments = "/C %ProgramFiles(x86)%\Software-Installer\Software-Installer.bat" >> %SCRIPT%
-echo  oLink.IconLocation = "%ProgramFiles(x86)%\Software-Installer\Donwload.ico" >> %SCRIPT%
+echo  oLink.IconLocation = "%ProgramFiles(x86)%\Software-Installer\Download.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
 del /S /Q %SCRIPT%
@@ -100,9 +100,6 @@ IF ERRORLEVEL 1 GOTO rmy
 
 :rmy
 CLS
-del /S /Q %ProgramFiles(x86)%\Software-Installer\Donwload.ico
-del /S /Q %ProgramFiles(x86)%\Software-Installer\Installer.ico
-del /S /Q %ProgramFiles(x86)%\Software-Installer\Mod-Installer.bat
 del /S /Q %DESKTOP_FOLDER%\Software-Installer.lnk
 rmdir /S /Q "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer"
 CLS
@@ -110,7 +107,7 @@ echo.
 echo  Fertig! Scripte wurden gel”scht!
 echo  Ausversehen entfernt? https://github.com/2020Sanoj/Software-Installer/releases/latest
 Pause
-del /S /Q %ProgramFiles(x86)%\Software-Installer\Installer-Uninstaller.bat
+rmdir /S /Q %ProgramFiles(x86)%\Software-Installer"
 del /S /Q %0
 GOTO end
 
