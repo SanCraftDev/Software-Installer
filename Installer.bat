@@ -71,7 +71,7 @@ echo  sLinkFile = "%DESKTOP_FOLDER%\Software-Installer.lnk" >> %SCRIPT%
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
 echo  oLink.Arguments = "/C %appdata%\Software-Installer\Software-Installer.bat" >> %SCRIPT%
-echo  oLink.IconLocation = "%appdata%\Software-Installer\Donwload.ico" >> %SCRIPT%
+echo  oLink.IconLocation = "%appdata%\Software-Installer\Download.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
 del /S /Q %SCRIPT%
