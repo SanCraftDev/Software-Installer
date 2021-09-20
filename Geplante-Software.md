@@ -84,6 +84,7 @@
  - docker
  - zoom
  - vim
+ - Language Addon
  - 
  
  **MS-Store Verlinkungen:** (ms-windows-store://pdp/?productid=9)
