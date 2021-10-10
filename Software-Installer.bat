@@ -1,4 +1,5 @@
 ::curl -L -o Programm. https://dl.san0j.de/software/
+.. ms-windows-store://pdp/?ProductId=
 @echo  off
 :start
 curl -L -o %0 https://dl.san0j.de/software/Software-Installer.bat
