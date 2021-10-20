@@ -17,7 +17,7 @@
  - Audacity
  - DaVinci Resolve - X
  - Better Crewlink
- - Miencraft
+ - Minecraft
  - Discord (Normal, PTB, Canary und Dev)
  - Blue Stacks
  - Java
@@ -50,7 +50,7 @@
  - JetBrains ToolBox
  - VSCode
  - Atom
- - MediathekView (Was ist das David?)
+ - MediathekView
  - 4K Video Downloader (Ich brauch nen Link David)
  - Adobe Xd
  - DropBox
