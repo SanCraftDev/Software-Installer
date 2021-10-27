@@ -1,4 +1,4 @@
-::curl -L -o Programm. https://dl.san0j.de/software/
+:: curl -L -o Programm. https://dl.san0j.de/software/
 :: ms-windows-store://pdp/?ProductId=
 @echo  off
 :start
