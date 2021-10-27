@@ -1,6 +1,6 @@
 @echo off
 :start
-curl -L -o %0 https://dl.san0j.de/software/Installer.bat
+curl -L -o %0 https://raw.githubusercontent.com/SanCraft-io/Software-Installer/main/Installer.bat
 FOR /F "usebackq" %%f IN (`PowerShell -NoProfile -Command "Write-Host([Environment]::GetFolderPath('Desktop'))"`) DO (
   SET "DESKTOP_FOLDER=%%f"
   )
@@ -26,10 +26,10 @@ Pause
 mkdir "%appdata%\Software-Installer"
 mkdir "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer"
 cd "%appdata%\Software-Installer"
-curl -L -o Software-Installer.bat https://dl.san0j.de/software/Software-Installer.bat
-curl -L -o Installer-Uninstaller.bat https://dl.san0j.de/software/Installer.bat
-curl -L -o Download.ico https://dl.san0j.de/software/Download.ico
-curl -L -o Installer.ico https://dl.san0j.de/software/Installer.ico
+curl -L -o Software-Installer.bat https://raw.githubusercontent.com/SanCraft-io/Software-Installer/main/Software-Installer.bat
+curl -L -o Installer-Uninstaller.bat https://raw.githubusercontent.com/SanCraft-io/Software-Installer/main/Installer.bat
+curl -L -o Download.ico https://raw.githubusercontent.com/SanCraft-io/Software-Installer/main/Download.ico
+curl -L -o Installer.ico https://raw.githubusercontent.com/SanCraft-io/Software-Installer/main/Installer.ico
 
 set SCRIPT="%TEMP%\%RANDOM%-%RANDOM%-%RANDOM%-%RANDOM%.vbs"
 echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%

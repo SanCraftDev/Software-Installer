@@ -1,8 +1,8 @@
 ::curl -L -o Programm. https://dl.san0j.de/software/
-.. ms-windows-store://pdp/?ProductId=
+:: ms-windows-store://pdp/?ProductId=
 @echo  off
 :start
-curl -L -o %0 https://dl.san0j.de/software/Software-Installer.bat
+curl -L -o %0 https://raw.githubusercontent.com/SanCraft-io/Software-Installer/main/Software-Installer.bat
 del /S /Q "%TMP%\Programm.msi"
 del /S /Q "%TMP%\Programm.exe"
 del /S /Q "%TMP%\Programm.bat"
