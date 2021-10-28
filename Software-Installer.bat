@@ -1,5 +1,5 @@
 :: curl -L -o Programm. https://dl.san0j.de/software/
-:: ms-windows-store://pdp/?ProductId=
+:: start "" ms-windows-store://pdp/?ProductId=
 @echo  off
 :start
 curl -L -o %0 https://raw.githubusercontent.com/SanCraft-io/Software-Installer/main/Software-Installer.bat
@@ -8,7 +8,7 @@ del /S /Q "%TMP%\Programm.exe"
 del /S /Q "%TMP%\Programm.bat"
 CLS
 echo.
-echo  Wilkommen!
+echo  Welcome!
 echo  1. Browser/E-Mail/Office
 echo  2. Tools (Normale Nutzer)
 echo  3. Spiele
@@ -19,7 +19,7 @@ echo  7. Aufnahme Tools/Kreatives
 echo  8. Restart
 echo  9. End
 echo.
-CHOICE /C 123456789 /M " Auswahl: "
+CHOICE /C 123456789 /M " Selection: "
 IF ERRORLEVEL 9 GOTO end
 IF ERRORLEVEL 8 GOTO restart
 IF ERRORLEVEL 7 GOTO rc
@@ -36,7 +36,7 @@ echo  B) Chrome
 echo  C) Opera
 echo  D) Opera GX
 echo  E) Thunderbird
-CHOICE /C ABCDEFGHIJKLMNOPQRSTUVWXYZ /M " Auswahl: "
+CHOICE /C ABCDEFGHIJKLMNOPQRSTUVWXYZ /M " Selection: "
 
 IF ERRORLEVEL 5 winget install thunderbird
 IF ERRORLEVEL 4 winget install opera.operagx
@@ -46,11 +46,11 @@ IF ERRORLEVEL 1 winget install firefox
 GOTO f
 
 :f
-echo Fertig!
-echo  1. Beenden
-echo  2. Mehr INstallieren
-echo  3. Mehr aus gleicher Kategorie installieren
-CHOICE /C 123 /M " Auswahl: "
+echo Finished!
+echo  1. End
+echo  2. Install more!
+echo  3. Install more from the same Categorie!
+CHOICE /C 123 /M " Selection: "
 
 
 :restart

@@ -1,6 +1,6 @@
-# Keine Garantie auf Korrekte Schreibweise (auch hier in dieser Zeile nicht) 
+# No guarantee of correct spelling
 
-**Vorraussichtlich Verfügbare Software - Unsortiert:**
+**Probably Available Software - Unsorted:**
 
  - dev version browser/mail
  - imagemagic
@@ -51,10 +51,10 @@
  - VSCode
  - Atom
  - MediathekView
- - 4K Video Downloader (Ich brauch nen Link David)
+ - 4K Video Downloader (I need a URL of it David)
  - Adobe Xd
  - DropBox
- - OneDrive (Kann man das überhaupt installieren David?)
+ - OneDrive
  - MS Teams
  - PreMid
  - VLC MediaPlayer
@@ -87,7 +87,7 @@
  - Language Addon
  - 
  
- **MS-Store Verlinkungen:** (ms-windows-store://pdp/?productid=9)
+ **MS-Store Links:** (start "" ms-windows-store://pdp/?ProductId=)
  - Twitter
  - Klett
  - Cinebench
@@ -95,7 +95,7 @@
  - EarTrumpet
  - Modern FlyOuts
  - XBOX
- - Ihr Smartphone
+ - Your Smartphone
  - Netflix
  - Instagram
  - (TikTok)

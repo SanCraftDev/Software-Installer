@@ -1,13 +1,17 @@
 # Software-Installer
  
-Mit dieser Skript kannste du Windows Programme installieren (Programme wie 7-Zip, Firefox, Chrome und viele weitere!)<br/>
-**DIESER INSTALLER IST NOCH IN ENTWICLUNG!**
+With this script you can install Windows programs (programs like 7-Zip, Firefox, Chrome and many more!) <br/>
+**THIS Installer IS STILL UNDER DEVELOPMENT!**
 
-Den Download findest du hier: https://github.com/2020Sanoj/Software-Installer/releases/latest/<br/>
-Hinterlasse gerne Feedback, Bugs und Vorschläge (auch für weitere Programme) in den Issues! (https://github.com/2020Sanoj/Software-Installer/issues/)
+You can find the download here: https://github.com/2020Sanoj/Software-Installer/releases/latest/ <br/>
+Feel free to leave feedback, bugs and suggestions (also for other programs) in the issues! (https://github.com/2020Sanoj/Software-Installer/issues/)
 
-**Liste aller aktuell Unterstützten Programme:**
- - 
+** List of all currently supported programs: **
+  - Firefox
+  - Thunderbird
+  - Chrome
+  - Opera
+  - OperaGX
  
-**Geplante Programme:**
+** Planned programs: **
 https://github.com/2020Sanoj/Software-Installer/blob/main/Geplante-Software.md

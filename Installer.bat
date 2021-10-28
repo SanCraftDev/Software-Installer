@@ -10,18 +10,18 @@ del /S /Q "%TMP%\Programm.bat"
 
 CLS
 echo.
-echo  Willkommen beim Installer des Software-Installers!
+echo  Welcome to the Software-Installer Installer!
 echo.
-echo  1. Installieren/Reparieren
-echo  2. Entfernen
+echo  1. Install/Repair
+echo  2. Remove
 echo.
-CHOICE /C 12 /M " Auswahl: "
+CHOICE /C 12 /M " Selection: "
 IF ERRORLEVEL 2 GOTO rm
 IF ERRORLEVEL 1 GOTO is
 
 :is
 CLS
-echo  Instalation starten?
+echo  Start installation?
 Pause
 mkdir "%appdata%\Software-Installer"
 mkdir "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer"
@@ -54,13 +54,13 @@ cscript /nologo %SCRIPT%
 del /S /Q %SCRIPT%
 
 CLS
-echo  Scripte erfolgreich in "%appdata%\Software-Installer" gespeichert!
-echo  DesktopverkÅpfung erstellen?
+echo  Scripts were saved in "%appdata%\Software-Installer"!
+echo  Create Desktop-Shortcuts?
 echo.
-echo  1. Ja
-echo  2. Nein
+echo  1. Yes
+echo  2. No
 echo.
-CHOICE /C 12 /M " Auswahl: "
+CHOICE /C 12 /M " Selection: "
 IF ERRORLEVEL 2 GOTO if
 IF ERRORLEVEL 1 GOTO l
 
@@ -79,7 +79,7 @@ GOTO if
 
 :if
 CLS
-echo  Fertig
+echo  Finished!
 Pause
 GOTO end
 
@@ -89,12 +89,12 @@ exit /B
 :rm
 CLS
 echo.
-echo  Wirklich lîschen?
+echo  Remove?
 echo.
-echo  1. Ja
-echo  2. Nein
+echo  1. Yes
+echo  2. No
 echo.
-CHOICE /C 12 /M " Auswahl: "
+CHOICE /C 12 /M " Selection: "
 IF ERRORLEVEL 2 GOTO end
 IF ERRORLEVEL 1 GOTO rmy
 
@@ -104,8 +104,8 @@ del /S /Q %DESKTOP_FOLDER%\Software-Installer.lnk
 rmdir /S /Q "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer"
 CLS
 echo.
-echo  Fertig! Scripte wurden gelîscht!
-echo  Ausversehen entfernt? https://github.com/2020Sanoj/Software-Installer/releases/latest
+echo  Finished! Scripts were deleted!
+echo  Accidentally removed? https://github.com/2020Sanoj/Software-Installer/releases/latest
 Pause
 rmdir /S /Q %appdata%\Software-Installer"
 del /S /Q %0
