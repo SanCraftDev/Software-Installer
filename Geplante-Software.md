@@ -88,6 +88,7 @@
  - 
  
  **MS-Store Links:** (start "" ms-windows-store://pdp/?ProductId=)
+ - Minecraft
  - Twitter
  - Klett
  - Cinebench
