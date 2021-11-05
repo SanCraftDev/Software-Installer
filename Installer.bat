@@ -61,7 +61,7 @@ mkdir "%appdata%\Software-Installer"
 mkdir "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer"
 cd "%appdata%\Software-Installer"
 curl -L -o Software-Installer.bat https://raw.githubusercontent.com/SanCraft-io/Software-Installer/main/Software-Installer.bat
-curl -L -o Installer-Uninstaller.bat https://raw.githubusercontent.com/SanCraft-io/Software-Installer/main/Installer.bat
+curl -L -o Uninstaller-Installer.bat https://raw.githubusercontent.com/SanCraft-io/Software-Installer/main/Installer.bat
 curl -L -o Download.ico https://raw.githubusercontent.com/SanCraft-io/Software-Installer/main/Download.ico
 curl -L -o Installer.ico https://raw.githubusercontent.com/SanCraft-io/Software-Installer/main/Installer.ico
 
@@ -78,10 +78,10 @@ del /S /Q %SCRIPT%
 
 set SCRIPT="%TEMP%\%RANDOM%-%RANDOM%-%RANDOM%-%RANDOM%.vbs"
 echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
-echo  sLinkFile = "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer\Installer-Uninstaller.lnk" >> %SCRIPT%
+echo  sLinkFile = "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer\Uninstaller-Installer.lnk" >> %SCRIPT%
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
-echo  oLink.Arguments = "/C %appdata%\Software-Installer\Installer-Uninstaller.bat" >> %SCRIPT%
+echo  oLink.Arguments = "/C %appdata%\Software-Installer\Uninstaller-Installer.bat" >> %SCRIPT%
 echo  oLink.IconLocation = "%appdata%\Software-Installer\Installer.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
