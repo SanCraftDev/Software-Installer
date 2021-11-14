@@ -93,7 +93,7 @@ echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
 echo  sLinkFile = "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer\Software-Installer.lnk" >> %SCRIPT%
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
-echo  oLink.Arguments = "/C C:\PROGRA~1\Software-Installer\Uninstaller-Installer.bat" >> %SCRIPT%
+echo  oLink.Arguments = "/C C:\PROGRA~1\Software-Installer\Software-Installer.bat" >> %SCRIPT%
 echo  oLink.IconLocation = "%ProgramFiles%\Software-Installer\Download.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
@@ -104,7 +104,7 @@ echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
 echo  sLinkFile = "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer\Uninstaller-Installer.lnk" >> %SCRIPT%
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
-echo  oLink.Arguments = "/C C:\PROGRA~1\Software-Installer\Software-Installer.bat" >> %SCRIPT%
+echo  oLink.Arguments = "/C C:\PROGRA~1\Software-Installer\Uninstaller-Installer.bat" >> %SCRIPT%
 echo  oLink.IconLocation = "%ProgramFiles%\Software-Installer\Installer.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
