@@ -87,13 +87,15 @@ curl -L -o Software-Installer.bat https://raw.githubusercontent.com/SanCraftDev/
 curl -L -o Uninstaller-Installer.bat https://raw.githubusercontent.com/SanCraftDev/Software-Installer/main/Installer.bat
 curl -L -o Download.ico https://raw.githubusercontent.com/SanCraftDev/Software-Installer/main/Download.ico
 curl -L -o Installer.ico https://raw.githubusercontent.com/SanCraftDev/Software-Installer/main/Installer.ico
+set sib="%ProgramFiles%\Software-Installer\Software-Installer.bat"
+set iub="%ProgramFiles%\Software-Installer\Uninstaller-Installer.bat"
 
 set SCRIPT="%TEMP%\%RANDOM%-%RANDOM%-%RANDOM%-%RANDOM%.vbs"
 echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
 echo  sLinkFile = "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer\Software-Installer.lnk" >> %SCRIPT%
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
-echo  oLink.Arguments = "/C "%ProgramFiles%\Software-Installer\Software-Installer.bat"" >> %SCRIPT%
+echo  oLink.Arguments = "/C %sib%" >> %SCRIPT%
 echo  oLink.IconLocation = "%ProgramFiles%\Software-Installer\Download.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
@@ -104,7 +106,7 @@ echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
 echo  sLinkFile = "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer\Uninstaller-Installer.lnk" >> %SCRIPT%
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
-echo  oLink.Arguments = "/C "%ProgramFiles%\Software-Installer\Uninstaller-Installer.bat"" >> %SCRIPT%
+echo  oLink.Arguments = "/C %iub%" >> %SCRIPT%
 echo  oLink.IconLocation = "%ProgramFiles%\Software-Installer\Installer.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
@@ -127,7 +129,7 @@ echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
 echo  sLinkFile = "%DESKTOP_FOLDER%\Software-Installer.lnk" >> %SCRIPT%
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
-echo  oLink.Arguments = "/C "%ProgramFiles%\Software-Installer\Software-Installer.bat"" >> %SCRIPT%
+echo  oLink.Arguments = "/C %sib%" >> %SCRIPT%
 echo  oLink.IconLocation = "%ProgramFiles%\Software-Installer\Download.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
