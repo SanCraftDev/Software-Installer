@@ -27,6 +27,7 @@ if '%errorlevel%' NEQ '0' (
 :--------------------------------------  
 :start
 curl -L -o %0 https://raw.githubusercontent.com/SanCraft-io/Software-Installer/main/Software-Installer.bat
+C:
 del /S /Q "%TMP%\Programm.msi"
 del /S /Q "%TMP%\Programm.exe"
 del /S /Q "%TMP%\Programm.bat"
