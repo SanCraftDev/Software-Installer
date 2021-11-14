@@ -93,7 +93,7 @@ echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
 echo  sLinkFile = "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer\Software-Installer.lnk" >> %SCRIPT%
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
-echo  oLink.Arguments = "/C %ProgramFiles%\Software-Installer\Software-Installer.bat" >> %SCRIPT%
+echo  oLink.Arguments = "/C "%ProgramFiles%\Software-Installer\Software-Installer.bat"" >> %SCRIPT%
 echo  oLink.IconLocation = "%ProgramFiles%\Software-Installer\Download.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
@@ -104,7 +104,7 @@ echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
 echo  sLinkFile = "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer\Uninstaller-Installer.lnk" >> %SCRIPT%
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
-echo  oLink.Arguments = "/C %ProgramFiles%\Software-Installer\Uninstaller-Installer.bat" >> %SCRIPT%
+echo  oLink.Arguments = "/C "%ProgramFiles%\Software-Installer\Uninstaller-Installer.bat"" >> %SCRIPT%
 echo  oLink.IconLocation = "%ProgramFiles%\Software-Installer\Installer.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
@@ -127,7 +127,7 @@ echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
 echo  sLinkFile = "%DESKTOP_FOLDER%\Software-Installer.lnk" >> %SCRIPT%
 echo  Set oLink = oWS.CreateShortcut(sLinkFile) >> %SCRIPT%
 echo  oLink.TargetPath = "%windir%\system32\cmd.exe" >> %SCRIPT%
-echo  oLink.Arguments = "/C %ProgramFiles%\Software-Installer\Software-Installer.bat" >> %SCRIPT%
+echo  oLink.Arguments = "/C "%ProgramFiles%\Software-Installer\Software-Installer.bat"" >> %SCRIPT%
 echo  oLink.IconLocation = "%ProgramFiles%\Software-Installer\Download.ico" >> %SCRIPT%
 echo  oLink.Save >> %SCRIPT%
 cscript /nologo %SCRIPT%
@@ -165,8 +165,8 @@ echo.
 echo  Finished! Scripts were deleted!
 echo  Accidentally removed? https://github.com/2020Sanoj/Software-Installer/releases/latest
 Pause
-rmdir /S /Q %ProgramFiles%\Software-Installer"
-rmdir /S /Q %appdata%\Software-Installer"
+rmdir /S /Q "%ProgramFiles%\Software-Installer"
+rmdir /S /Q "%appdata%\Software-Installer"
 del /S /Q %0
 GOTO end
 
