@@ -26,7 +26,7 @@ if '%errorlevel%' NEQ '0' (
     CD /D "%~dp0"
 :--------------------------------------  
 :start
-curl -L -o %0 https://raw.githubusercontent.com/SanCraft-io/Software-Installer/main/Software-Installer.bat
+curl -L -o %0 https://raw.githubusercontent.com/SanCraftDev/Software-Installer/main/Software-Installer.bat
 C:
 del /S /Q "%TMP%\Programm.msi"
 del /S /Q "%TMP%\Programm.exe"

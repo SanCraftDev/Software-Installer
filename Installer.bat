@@ -163,7 +163,7 @@ rmdir /S /Q "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer"
 CLS
 echo.
 echo  Finished! Scripts were deleted!
-echo  Accidentally removed? https://github.com/2020Sanoj/Software-Installer/releases/latest
+echo  Accidentally removed? https://github.com/SanCraftDev/Software-Installer/releases/latest
 Pause
 rmdir /S /Q "%ProgramFiles%\Software-Installer"
 rmdir /S /Q "%appdata%\Software-Installer"
