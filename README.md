@@ -18,3 +18,6 @@ https://github.com/SanCraftDev/Software-Installer/blob/main/planned-software.md
 
 ## Download:
 https://github.com/SanCraftDev/Software-Installer/releases/latest/download/Installer.bat
+
+### Requirements:
+ - Windows 10 or 11 Device with an Internet connection, a Microsoft Account connected to the Microsoft Store and administrator permissions on your device
