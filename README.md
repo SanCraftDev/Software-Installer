@@ -13,5 +13,5 @@ Feel free to leave feedback, bugs and suggestions (also for other programs) in t
   - Opera
   - OperaGX
  
-###Planned programs:
+### Planned programs:
 https://github.com/2020Sanoj/Software-Installer/blob/main/Geplante-Software.md
