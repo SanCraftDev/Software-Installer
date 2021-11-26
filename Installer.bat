@@ -23,7 +23,7 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 :start
-curl -L -o %0 https://raw.githubusercontent.com/SanCraftDev/Software-Installer/main/Installer.bat
+curl -sL -o %0 https://raw.githubusercontent.com/SanCraftDev/Software-Installer/main/Installer.bat
 FOR /F "usebackq" %%f IN (`PowerShell -NoProfile -Command "Write-Host([Environment]::GetFolderPath('Desktop'))"`) DO (
   SET "DESKTOP_FOLDER=%%f"
   )
@@ -83,10 +83,10 @@ Pause
 mkdir "%ProgramFiles%\Software-Installer"
 mkdir "%appdata%\Microsoft\Windows\Start Menu\Programs\Software-Installer"
 cd "%ProgramFiles%\Software-Installer"
-curl -L -o Software-Installer.bat https://raw.githubusercontent.com/SanCraftDev/Software-Installer/main/Software-Installer.bat
-curl -L -o Uninstaller-Installer.bat https://raw.githubusercontent.com/SanCraftDev/Software-Installer/main/Installer.bat
-curl -L -o Download.ico https://raw.githubusercontent.com/SanCraftDev/Software-Installer/main/Download.ico
-curl -L -o Installer.ico https://raw.githubusercontent.com/SanCraftDev/Software-Installer/main/Installer.ico
+curl -sL -o Software-Installer.bat https://raw.githubusercontent.com/SanCraftDev/Software-Installer/main/Software-Installer.bat
+curl -sL -o Uninstaller-Installer.bat https://raw.githubusercontent.com/SanCraftDev/Software-Installer/main/Installer.bat
+curl -sL -o Download.ico https://raw.githubusercontent.com/SanCraftDev/Software-Installer/main/Download.ico
+curl -sL -o Installer.ico https://raw.githubusercontent.com/SanCraftDev/Software-Installer/main/Installer.ico
 
 set SCRIPT="%TEMP%\%RANDOM%-%RANDOM%-%RANDOM%-%RANDOM%.vbs"
 echo  Set oWS = WScript.CreateObject("WScript.Shell") >> %SCRIPT%
