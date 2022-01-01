@@ -35,7 +35,7 @@ CLS
 echo.
 echo  MIT License
 echo.
-echo  Copyright (c) 2021 SanCraft
+echo  Copyright (c) 2022 SanCraft
 echo.
 echo  Permission is hereby granted, free of charge, to any person obtaining a copy
 echo  of this software and associated documentation files (the "Software"), to deal
