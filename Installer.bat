@@ -39,7 +39,7 @@ echo  Copyright (c) 2022 SanCraft
 echo.
 echo  The latest Version of Mozilla Public License 2.0 can be found here: https://mozilla.org/en-US/MPL/2.0
 echo.
-echo Do you accept this License?
+echo  Do you accept this License?
 echo.
 echo  1. No
 echo  2. Yes
