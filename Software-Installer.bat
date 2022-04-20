@@ -1,4 +1,4 @@
-:: curl -L -o Programm. https://dl.san0j.de/software/
+:: curl -L -o Programm. https://dl.scdmx.de/software/
 :: start "" ms-windows-store://pdp/?ProductId=
 @echo  off
     IF "%PROCESSOR_ARCHITECTURE%" EQU "amd64" (
